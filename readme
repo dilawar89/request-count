@@ -1,0 +1,17 @@
+This project is a demo of how to count the number of request hitting the API using spring inbuilt library:
+
+1. Add Actuator and Micrometer dependencies.
+2. Enable Actuator endpoints in the configuration.
+3. Access the metrics at the /actuator/metrics endpoint.
+4. (Optional) Use Prometheus and Grafana for advanced monitoring and visualization.
+
+http://localhost:8080/hello --> endpoint
+http://localhost:8080/actuator/metrics/http.server.requests --> endpoint to see count and everything
+
+Example Response:
+-----------------
+{"name":"http.server.requests","baseUnit":"seconds","measurements":[{"statistic":"COUNT","value":1.0},
+{"statistic":"TOTAL_TIME","value":0.0762482},{"statistic":"MAX","value":0.0762482}],"availableTags":
+[{"tag":"exception","values":["none"]},{"tag":"method","values":["GET"]},{"tag":"application","values":["request-
+counter"]},{"tag":"error","values":["none"]},{"tag":"uri","values":["/hello"]},{"tag":"outcome","values":["SUCCESS"]},
+{"tag":"status","values":["200"]}]} 

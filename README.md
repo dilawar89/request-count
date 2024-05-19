@@ -1,2 +1,2 @@
-# request-count
-To count the no of requests that were served by the API
+# request-counter
+To counter no of request that has reached the API
